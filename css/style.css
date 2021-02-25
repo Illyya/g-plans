@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.2;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Proximanova';
+  src: local("☺"), url("../fonts/proximanova-bold.woff2") format("woff2"), url("../fonts/proximanova-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-h1 {
+  font-family: "Proximanova";
+  font-weight: 700;
+  font-size: 1.625rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 20px 160px 20px 105px;
+  font-family: "Proximanova";
+  font-size: 1.625rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 40px;
+  background: url(../img/arrow.webp) no-repeat 71% 50%, -webkit-gradient(linear, left top, left bottom, from(#f68834), to(#e8145d));
+  background: url(../img/arrow.webp) no-repeat 71% 50%, -o-linear-gradient(#f68834, #e8145d);
+  background: url(../img/arrow.webp) no-repeat 71% 50%, linear-gradient(#f68834, #e8145d);
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 10px 10px 10px;
+          box-shadow: 10px 10px 10px;
+}
+
+.main {
+  padding: 55px 0 120px 0;
+}
+
+.note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.note__title-h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.letter {
+  position: relative;
+  max-width: 600px;
+  padding: 40px 35px 65px 58px;
+  margin: 0 auto 85px auto;
+  border-radius: 20px;
+  background-color: #fff7e0;
+}
+
+.letter::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  left: 29px;
+  bottom: 0;
+  background-color: #ff0000;
+}
+
+.letter__text:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.letter__bottom {
+  position: relative;
+}
+
+.letter__signature-img {
+  max-width: 196px;
+}
+
+.letter__photo-img {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  -webkit-transform: translateY(-13%) rotate(5deg);
+      -ms-transform: translateY(-13%) rotate(5deg);
+          transform: translateY(-13%) rotate(5deg);
+  max-width: 225px;
+  max-height: 225px;
+  border: 10px solid #ffffff;
+}
+
+.letter__photo-img::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 36px;
+  top: -17%;
+  left: 40%;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  background: url("../img/Layer-3.webp") no-repeat;
+}
+
+@media (max-width: 530px) {
+  .btn {
+    padding: 10px 100px 10px 45px;
+    font-size: 1.4rem;
+    background: url(../img/arrow.webp) no-repeat 77% 50%, -webkit-gradient(linear, left top, left bottom, from(#f68834), to(#e8145d));
+    background: url(../img/arrow.webp) no-repeat 77% 50%, -o-linear-gradient(#f68834, #e8145d);
+    background: url(../img/arrow.webp) no-repeat 77% 50%, linear-gradient(#f68834, #e8145d);
+  }
+
+  .main {
+    padding: 45px 0 60px 0;
+  }
+
+  .letter {
+    padding: 40px 35px 165px 58px;
+    margin: 0 auto 125px auto;
+  }
+
+  .letter__photo-img {
+    top: 140%;
+  }
+}
